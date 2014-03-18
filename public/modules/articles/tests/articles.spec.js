@@ -2,7 +2,7 @@
 
 (function() {
 	// Articles Controller Spec
-	describe('MEAN controllers', function() {
+	describe('timeline controllers', function() {
 		describe('ArticlesController', function() {
 			// Initialize global variables
 			var ArticlesController,
@@ -31,7 +31,7 @@
 			});
 
 			// Then we can start by loading the main application module
-			beforeEach(module('mean'));
+			beforeEach(module('timeline'));
 
 			// The injector ignores leading and trailing underscores here (i.e. _$httpBackend_).
 			// This allows us to inject a service but then attach it to a variable

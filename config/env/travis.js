@@ -1,10 +1,10 @@
 'use strict';
 
 module.exports = {
-	db: 'mongodb://localhost/mean-travis',
+	db: 'mongodb://localhost/timeline-travis',
 	port: 3001,
 	app: {
-		title: 'MEAN.JS - Travis Environment'
+		title: 'TimeLine - Travis Environment'
 	},
 	facebook: {
 		clientID: 'APP_ID',

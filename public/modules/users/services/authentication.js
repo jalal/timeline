@@ -1,7 +1,7 @@
 'use strict';
 
 //Authentication service for user variables
-angular.module('mean.users').factory('Authentication', [
+angular.module('timeline.users').factory('Authentication', [
 	function() {
 		var _this = this;
 

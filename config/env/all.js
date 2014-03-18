@@ -5,14 +5,14 @@ var path = require('path'),
 
 module.exports = {
 	app: {
-		title: 'MEAN.JS',
-		description: 'Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js',
-		keywords: 'mongodb, express, angularjs, node.js, mongoose, passport'
+		title: 'TimeLine',
+		description: 'A TimeLine application',
+		keywords: 'timeline, mongodb, express, angularjs, node.js, mongoose, passport'
 	},
 	db: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI,
 	root: rootPath,
 	port: process.env.PORT || 3000,
 	templateEngine: 'swig',
-	sessionSecret: 'MEAN',
+	sessionSecret: 'TIMELINE',
 	sessionCollection: 'sessions'
 };

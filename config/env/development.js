@@ -1,9 +1,9 @@
 'use strict';
 
 module.exports = {
-	db: 'mongodb://localhost/mean-dev',
+	db: 'mongodb://localhost/timeline-dev',
 	app: {
-		title: 'MEAN.JS - Development Environment'
+		title: 'TimeLine - Development Environment'
 	},
 	facebook: {
 		clientID: 'APP_ID',
