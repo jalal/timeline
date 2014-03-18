@@ -1,12 +1,12 @@
 {
-	"name": "meanjs",
-	"description": "Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js.",
-	"version": "0.2.1",
+	"name": "timeline",
+	"description": "TimeLine application based on meanjs.",
+	"version": "0.1.0",
 	"private": false,
-	"author": "https://github.com/meanjs/mean/graphs/contributors",
+	"author": "jalal @ gnomedia",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/meanjs/mean.git"
+		"url": "https://github.com/jalal/timeline.git"
 	},
 	"engines": {
 		"node": "0.10.x",
