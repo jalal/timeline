@@ -1,0 +1,92 @@
+<section data-ng-controller="TimeLinesController" data-ng-init="findOne()">
+    <div class="page-header">
+        <h1>Edit Timeline</h1>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="update()">
+            <fieldset>
+                <legend>TimeLine</legend>
+                <div class="form-group">
+                    <label class="col-sm-1 control-label" for="title">Title</label>
+                    <div class="col-sm-10 controls">
+                        <input type="text" data-ng-model="timeline.title" id="title" class="form-control" placeholder="Title" required>
+                    </div>
+                    <div class="col-sm-1">
+                    <button class="btn btn-large btn-primary"
+                            ng-click="update(timeline);">
+                        <i class="glyphicon glyphicon-edit"></i>
+                    </button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+
+        <form class="form-horizontal">
+            <fieldset>
+                <legend>Add Event</legend>
+                <div class="form-group">
+
+                    <div class="controls row">
+                        <label class="control-label col-sm-1" for="title">Title</label>
+                        <div class="col-sm-11">
+                            <input type="text"
+                                   data-ng-model="newevent.title"
+                                   id="title" class="form-control"
+                                   placeholder="Title" required>
+                        </div>
+                    </div>
+                    <div class="controls row">
+                        <label class="control-label col-sm-1" for="notes">Notes</label>
+                        <div class="col-sm-11">
+                            <textarea data-ng-model="newevent.notes"
+                                      id="notes" class="form-control" rows="4">
+                                      </textarea>
+                        </div>
+                    </div>
+                    <div class="controls row">
+                        <label for="startdate" class="control-label col-sm-1">Starting</label>
+                        <div class="col-sm-4">
+                            <input type="date" data-ng-model="newevent.startDate"
+                                   id="startdate" class="form-control"
+                                   placeholder="Start date" required>
+                        </div>
+                        <label for="enddate" class="control-label col-sm-1">Starting</label>
+                        <div class="col-sm-4">
+                            <input type="date" data-ng-model="newevent.endDate"
+                                   id="enddate" class="form-control"
+                                   placeholder="End date">
+                        </div>
+                        <div class="col-sm-offset-1 col-sm-1">
+                            <button class="btn btn-large btn-primary"
+                                    ng-click="addEvent(newevent);clearEvent90">
+                                <i class="glyphicon glyphicon-check"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </fieldset>
+
+        </form>
+
+        <h3>Events</h3>
+        <div class="" ng-repeat="event in timeline.events">
+            <div class="row">
+                <div class="col-sm-2">
+                    {{event.startDate | date : date : mediumDate}}
+                </div>
+                <div class="col-sm-2">
+                    {{event.endDate | date : date : mediumDate}}
+                </div>
+                <div class="col-sm-8">
+                    {{event.title}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    {{event.notes}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

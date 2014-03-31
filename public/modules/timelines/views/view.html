@@ -1,0 +1,55 @@
+<section data-ng-controller="TimeLinesController" data-ng-init="findOne()">
+
+    <div class="row page-header">
+        <div class="col-xs-10">
+            <h1>{{timeline.title}}</h1>
+        </div>
+        <div class="col-xs-2" data-ng-show="authentication.user._id == timeline.user._id">
+            <a class="btn btn-primary" href="/#!/timelines/{{timeline._id}}/edit">
+                <i class="glyphicon glyphicon-edit"></i>
+            </a>
+            <a class="btn btn-primary" data-ng-click="remove();">
+                <i class="glyphicon glyphicon-trash"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="" ng-repeat="event in timeline.events">
+            <div class="row">
+                <div class="col-sm-2">
+                    {{event.startDate | date : date : mediumDate}}
+                </div>
+                <div class="col-sm-2">
+                    {{event.endDate | date : date : mediumDate}}
+                </div>
+                <div class="col-sm-8">
+                    {{event.title}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    {{event.notes}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    Distance: {{event.distance}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div ng-repeat="event in timeline.events">
+            <div style="border-top: 1px solid grey;margin-top:{{event.distance}}px">{{event.title}}</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <small>
+            <em class="text-muted">Posted on {{timeline.created | date:'mediumDate'}} by {{timeline.user.displayName}}</em>
+        </small>
+    </div>
+
+</section>
