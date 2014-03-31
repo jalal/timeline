@@ -9,11 +9,20 @@ angular.module('timeline.core').controller('HeaderController', ['$scope', 'Authe
 			title: 'Articles',
 			link: 'articles',
 			uiRoute: '/articles'
-		}, {
+		}, /* {
 			title: 'New Article',
 			link: 'articles/create',
 			uiRoute: '/articles/create'
-		}];
+		}, */ {
+			title: 'TimeLines',
+			link: 'timelines',
+			uiRoute: '/timelines'
+		}, {
+			title: 'Create TimeLine',
+			link: 'timelines/create',
+			uiRoute: '/timelines/create'
+		}
+		];
 
 		$scope.toggleCollapsibleMenu = function() {
 			$scope.isCollapsed = !$scope.isCollapsed;
